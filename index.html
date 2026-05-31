@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Girl - Where Fire Meets Water</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.xorg/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="steam-text">Steam Girl</span>
+                <div class="logo-steam"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active" data-translate="nav.home">Home</a></li>
+                <li><a href="profile.html" class="nav-link" data-translate="nav.profile">Profile</a></li>
+                <li><a href="growth.html" class="nav-link" data-translate="nav.growth">Growth</a></li>
+                <li><button id="language-toggle" class="language-btn" title="Switch Language">🌐</button></li>
+                <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span data-translate="hero.title.part1">Where Fire Meets Water,</span>
+                        <span class="gradient-text" data-translate="hero.title.part2">Magic Begins</span>
+                    </h1>
+                    <p class="hero-subtitle" data-translate="hero.subtitle">
+                        Meet Steam Girl – born of opposing forces, united by wonder. 
+                        In a realm where emotions shape reality, she bridges the impossible.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="profile.html" class="btn btn-primary">
+                            <span data-translate="hero.btn.discover">Discover Her Magic</span>
+                            <div class="btn-steam"></div>
+                        </a>
+                        <a href="growth.html" class="btn btn-secondary">
+                            <span data-translate="hero.btn.journey">See Her Journey</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="steam-girl-adult.jpg" alt="Steam Girl - Adult form with flowing fire and water magic" class="main-image">
+                        <div class="magic-aura fire-aura"></div>
+                        <div class="magic-aura water-aura"></div>
+                        <div class="floating-particles fire-particles"></div>
+                        <div class="floating-particles water-particles"></div>
+                        <div class="steam-wisps"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg-gradient"></div>
+            <canvas id="particle-canvas"></canvas>
+        </section>
+
+        <!-- Powers Overview Section -->
+        <section class="powers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-translate="powers.title">The Dance of Elements</h2>
+                    <p class="section-subtitle" data-translate="powers.subtitle">
+                        Steam Girl harnesses the ancient power where fire and water become one. 
+                        Her magic flows like morning mist, burns like sunset flames, and brings life to everything she touches.
+                    </p>
+                </div>
+                
+                <div class="powers-grid">
+                    <div class="power-card fire-power">
+                        <div class="power-icon">🔥</div>
+                        <h3 data-translate="powers.fire.title">Flame Mastery</h3>
+                        <p data-translate="powers.fire.desc">Controls the passionate fire within, creating warming flames that never burn those she protects.</p>
+                        <div class="power-demo fire-demo"></div>
+                    </div>
+                    
+                    <div class="power-card water-power">
+                        <div class="power-icon">💧</div>
+                        <h3 data-translate="powers.water.title">Water Harmony</h3>
+                        <p data-translate="powers.water.desc">Flows with the rhythm of rivers and rain, healing wounds and nurturing growth wherever she goes.</p>
+                        <div class="power-demo water-demo"></div>
+                    </div>
+                    
+                    <div class="power-card steam-power">
+                        <div class="power-icon">☁️</div>
+                        <h3 data-translate="powers.steam.title">Steam Creation</h3>
+                        <p data-translate="powers.steam.desc">Bridges fire and water to create magical steam that can transport, transform, and transcend.</p>
+                        <div class="power-demo steam-demo"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- World Introduction Section -->
+        <section class="world-section">
+            <div class="container">
+                <div class="world-content">
+                    <div class="world-text">
+                        <h2 class="world-title" data-translate="world.title">Welcome to Element City</h2>
+                        <p class="world-description" data-translate="world.desc1">
+                            Set in Element City, where Fire-, Water-, Earth- and Air-residents live together. 
+                            The elements that live in Element City symbolize the different races and their social status in New York City in real life.
+                            Steam Girl's journey through this diverse metropolis teaches us that our differences don't divide us—they make us stronger.
+                        </p>
+                        <p class="world-description" data-translate="world.desc2">
+                            From the bustling Water District where currents flow like city streets, to the glowing Fire Town where warmth and passion ignite, 
+                            every neighborhood of Element City pulses with the heartbeat of pure emotion and elemental magic.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Element City Showcase -->
+                <div class="city-showcase">
+                    <div class="city-story-grid">
+                        <div class="city-story main-city-story">
+                            <div class="story-image-container">
+                                <div class="story-image cropped-image">
+                                    <img src="ELEMENTAL-designing-element-city.jpg" alt="Element City - A diverse metropolis where all elements live together" class="city-img">
+                                    <div class="image-overlay soft-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="story-content">
+                                <h3 class="story-title"><span data-translate="city.main.title.part1">Element City:</span> <span class="accent-text" data-translate="city.main.title.part2">Where Diversity Flows</span></h3>
+                                <p class="story-narrative" data-translate="city.main.desc1">
+                                    In the heart of this magnificent metropolis, **towering structures pulse with elemental energy**. 
+                                    Steam Girl walks these vibrant streets where **water flows through crystal channels** alongside 
+                                    **fire's warm glow** from every window. Here, a water family might live next door to fire relatives, 
+                                    their children playing together in parks where earth grows gardens and air carries laughter 
+                                    across every neighborhood.
+                                </p>
+                                <div class="story-quote">
+                                    <blockquote>
+                                        <span data-translate="city.main.quote">"This city taught me that **home isn't about being the same**—it's about choosing to 
+                                        **build something beautiful together**, even when we're different."</span>
+                                        <cite data-translate="city.main.quote.cite">— Steam Girl's reflection</cite>
+                                    </blockquote>
+                                </div>
+                                <div class="story-highlight">
+                                    <span class="highlight-badge" data-translate="city.main.highlight">✨ Where every street tells a story of unity</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="city-story fire-town-story">
+                            <div class="story-content">
+                                <h3 class="story-title"><span data-translate="city.fire.title.part1">Fire Town:</span> <span class="fire-accent" data-translate="city.fire.title.part2">Hearts That Never Cool</span></h3>
+                                <p class="story-narrative" data-translate="city.fire.desc1">
+                                    In Fire Town's **glowing streets**, passion ignites every corner. Steam Girl's **fire heritage 
+                                    burns brightest here**, where molten metal flows like rivers and every building radiates 
+                                    warmth that goes beyond temperature—it's the **warmth of community**, of families gathering 
+                                    around eternal hearths, sharing stories that spark with life.
+                        </p>
+                                <div class="personal-memory">
+                                    <p class="memory-text">
+                                        <em data-translate="city.fire.memory">"My father Blaze brought me here as a child, and I watched **fire families 
+                                        feeding their flames together**, supporting each other through the coldest nights. 
+                                        They taught me that **true fire isn't destructive**—it's protective, nurturing, and endlessly giving."</em>
+                                    </p>
+                                </div>
+                                <div class="story-stats">
+                                    <div class="stat-badge fire-badge">
+                                        <span class="stat-icon">🔥</span>
+                                        <span class="stat-text" data-translate="city.fire.stat1">**Eternal Flames**</span>
+                                    </div>
+                                    <div class="stat-badge passion-badge">
+                                        <span class="stat-icon">❤️</span>
+                                        <span class="stat-text" data-translate="city.fire.stat2">**Passionate Hearts**</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="story-image-container fire-container">
+                                <div class="story-image cropped-image fire-crop">
+                                    <img src="firetown.jpg" alt="Fire Town - The passionate heart of Element City" class="city-img">
+                                    <div class="image-overlay fire-overlay"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="city-story water-district-story">
+                            <div class="story-image-container water-container">
+                                <div class="story-image cropped-image water-crop">
+                                    <img src="water distric.jpg" alt="Water District - The flowing foundation of Element City" class="city-img">
+                                    <div class="image-overlay water-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="story-content">
+                                <h3 class="story-title"><span data-translate="city.water.title.part1">Water District:</span> <span class="water-accent" data-translate="city.water.title.part2">The Flowing Foundation</span></h3>
+                                <p class="story-narrative" data-translate="city.water.desc1">
+                                    The Water District flows with **ancient wisdom and endless adaptability**. Here, Steam Girl's 
+                                    water mother Marina first showed her how **strength doesn't always roar**—sometimes it flows 
+                                    quietly, persistently, **finding ways around every obstacle** until it shapes the very 
+                                    landscape of possibility.
+                                </p>
+                                <p class="story-narrative" data-translate="city.water.desc2">
+                                    From the **grand aqueducts** where water citizens commute in rushing currents, to the **serene 
+                                    reflection pools** where families gather to share their day's experiences, this district 
+                                    embodies the truth that water, while yielding, **ultimately carves the deepest canyons**.
+                                </p>
+                                <div class="wisdom-quote">
+                                    <blockquote>
+                                        <span data-translate="city.water.quote">"In the Water District, I learned that **being fluid isn't weakness**—it's the **ultimate strength**."</span>
+                                        <cite data-translate="city.water.quote.cite">— Steam Girl's wisdom</cite>
+                                    </blockquote>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- District Living Experience -->
+                    <div class="living-experiences">
+                        <h3 class="experiences-title"><span data-translate="city.life.title">Life in</span> <span class="city-accent" data-translate="city.life.title.accent">Element City</span></h3>
+                        <div class="experience-grid">
+                            <div class="experience-card fire-experience">
+                                <div class="card-header">
+                                    <div class="experience-icon">🏠</div>
+                                    <h4 data-translate="city.life.fire.title">**Fire Family Life**</h4>
+                                </div>
+                                <p class="card-description" data-translate="city.life.fire.desc">
+                                    Homes heated by **love and literal flames**, where every meal is cooked with fire-born warmth 
+                                    and every evening ends with families gathered around their hearth, **sharing dreams that sparkle like embers**.
+                                </p>
+                            </div>
+                            <div class="experience-card water-experience">
+                                <div class="card-header">
+                                    <div class="experience-icon">🌊</div>
+                                    <h4 data-translate="city.life.water.title">**Water Community Flow**</h4>
+                                </div>
+                                <p class="card-description" data-translate="city.life.water.desc">
+                                    Neighbors flow between homes through **connecting waterways**, children splash in communal pools 
+                                    while parents **share stories that ripple through generations** like gentle waves.
+                                </p>
+                            </div>
+                            <div class="experience-card steam-experience">
+                                <div class="card-header">
+                                    <div class="experience-icon">☁️</div>
+                                    <h4 data-translate="city.life.steam.title">**Steam Girl's Bridge**</h4>
+                            </div>
+                                <p class="card-description" data-translate="city.life.steam.desc">
+                                    Moving between districts like **living poetry**, she carries fire's warmth to water's wisdom 
+                                    and water's flow to fire's passion, proving that **differences create the most beautiful harmonies**.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2 class="cta-title" data-translate="cta.title">Ready to Explore Her World?</h2>
+                    <p class="cta-text" data-translate="cta.text">
+                        Dive deeper into Steam Girl's story, discover her relationships, 
+                        and witness the incredible journey from curious child to elemental master.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="profile.html" class="btn btn-large btn-primary">
+                            <span data-translate="cta.btn.profile">Character Deep Dive</span>
+                        </a>
+                        <a href="growth.html" class="btn btn-large btn-secondary">
+                            <span data-translate="cta.btn.growth">Growth Timeline</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-bg-effects">
+                <div class="floating-ember"></div>
+                <div class="floating-droplet"></div>
+                <div class="steam-wisp"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p data-translate="footer.copyright">&copy; 2024 Steam Girl Universe. Created with 🔥 and 💧</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link" data-translate="footer.fanart">Fan Art</a>
+                    <a href="#" class="footer-link" data-translate="footer.community">Community</a>
+                    <a href="#" class="footer-link" data-translate="footer.downloads">Downloads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steam Girl Growth - A Journey of Elements</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="steam-text">Steam Girl</span>
+                <div class="logo-steam"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav.home">Home</a></li>
+                <li><a href="profile.html" class="nav-link" data-translate="nav.profile">Profile</a></li>
+                <li><a href="growth.html" class="nav-link active" data-translate="nav.growth">Growth</a></li>
+                <li><button id="language-toggle" class="language-btn" title="Switch Language">🌐</button></li>
+                <li><button id="theme-toggle" class="theme-btn">🌙</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Growth Hero Section -->
+        <section class="growth-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="growth-title" data-translate="growth.hero.title">Every Flame Starts with a Spark</h1>
+                    <p class="growth-subtitle" data-translate="growth.hero.subtitle">
+                        Watch Steam Girl's magical evolution unfold – from curious child to wise mediator, 
+                        each phase of her journey has shaped the bridge-builder she's become today.
+                    </p>
+                </div>
+                <div class="timeline-preview">
+                    <div class="preview-stage child-stage">
+                        <img src="steam-girl-child.jpg" alt="Young Steam Girl full of wonder and curiosity" class="preview-img">
+                        <span class="stage-label" data-translate="growth.preview.childhood">Childhood</span>
+                    </div>
+                    <div class="timeline-arrow">→</div>
+                    <div class="preview-stage teen-stage">
+                        <img src="steam-girl-teen.jpg" alt="Teenage Steam Girl learning to harness her growing powers" class="preview-img">
+                        <span class="stage-label" data-translate="growth.preview.adolescence">Adolescence</span>
+                    </div>
+                    <div class="timeline-arrow">→</div>
+                    <div class="preview-stage adult-stage">
+                        <img src="steam-girl-adult.jpg" alt="Adult Steam Girl mastering the balance of fire and water" class="preview-img">
+                        <span class="stage-label" data-translate="growth.preview.mastery">Mastery</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline Navigation -->
+        <nav class="timeline-nav">
+            <div class="container">
+                <div class="nav-timeline">
+                    <button class="timeline-btn active" data-stage="childhood">
+                        <span class="btn-text" data-translate="growth.nav.childhood">Childhood</span>
+                        <span class="age-range" data-translate="growth.nav.childhood_ages">Ages 3-10</span>
+                    </button>
+                    <button class="timeline-btn" data-stage="teenage">
+                        <span class="btn-text" data-translate="growth.nav.teenage">Teenage Years</span>
+                        <span class="age-range" data-translate="growth.nav.teenage_ages">Ages 11-17</span>
+                    </button>
+                    <button class="timeline-btn" data-stage="adulthood">
+                        <span class="btn-text" data-translate="growth.nav.adulthood">Adulthood</span>
+                        <span class="age-range" data-translate="growth.nav.adulthood_ages">Ages 18+</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Childhood Section -->
+        <section id="childhood" class="growth-stage childhood-stage active">
+            <div class="container">
+                <div class="stage-content">
+                    <div class="stage-image">
+                        <img src="steam-girl-child.jpg" alt="Young Steam Girl discovering her first magical sparks with joy and wonder" class="stage-img">
+                        <div class="image-effects childhood-effects">
+                            <div class="sparkle-effect"></div>
+                            <div class="bubble-effect"></div>
+                        </div>
+                    </div>
+                    <div class="stage-info">
+                        <div class="stage-header">
+                            <h2 class="stage-title" data-translate="growth.childhood.title">Little Sparks, Big Dreams</h2>
+                            <div class="age-indicator" data-translate="growth.childhood.age">Ages 3-10</div>
+                        </div>
+                        
+                        <div class="origin-story">
+                            <h3 data-translate="growth.childhood.discovery.title">The Discovery</h3>
+                            <p class="story-text" data-translate="growth.childhood.discovery.text1">
+                                Young Steam Girl's powers first emerged during a family camping trip in the Whispering Woods. 
+                                When she accidentally created her first steam cloud while trying to help with dinner, 
+                                her adoptive parents Blaze and Marina knew their daughter was destined for something extraordinary.
+                            </p>
+                            <p class="story-text" data-translate="growth.childhood.discovery.text2">
+                                "Mama, look! The water and fire are dancing together!" she giggled, watching tiny steam wisps 
+                                swirl around her small hands. It was the first sign that she would become a bridge between worlds.
+                            </p>
+                        </div>
+
+                        <div class="powers-development">
+                            <h3 data-translate="growth.childhood.powers.title">Emerging Abilities</h3>
+                            <div class="power-grid childhood-powers">
+                                <div class="power-item">
+                                    <div class="power-icon">✨</div>
+                                    <h4 data-translate="growth.childhood.powers.weather.title">Emotional Weather</h4>
+                                    <p data-translate="growth.childhood.powers.weather.desc">Rooms grew warmer when she was happy, cooler when sad. Her feelings created tiny weather systems.</p>
+                                </div>
+                                <div class="power-item">
+                                    <div class="power-icon">🫧</div>
+                                    <h4 data-translate="growth.childhood.powers.bubbles.title">Giggling Bubbles</h4>
+                                    <p data-translate="growth.childhood.powers.bubbles.desc">Water bubbles that never popped and seemed to laugh when touched, bringing joy to other children.</p>
+                                </div>
+                                <div class="power-item">
+                                    <div class="power-icon">🔥</div>
+                                    <h4 data-translate="growth.childhood.powers.flames.title">Tickling Flames</h4>
+                                    <p data-translate="growth.childhood.powers.flames.desc">Tiny flames that danced around her fingers, warm and comforting but never burning.</p>
+                                </div>
+                                <div class="power-item">
+                                    <div class="power-icon">☁️</div>
+                                    <h4 data-translate="growth.childhood.powers.clouds.title">Hide-and-Seek Clouds</h4>
+                                    <p data-translate="growth.childhood.powers.clouds.desc">Miniature steam clouds perfect for magical games and making friends laugh.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="key-moments">
+                            <h3 data-translate="growth.childhood.moments.title">Defining Moments</h3>
+                            <div class="moment-timeline">
+                                <div class="moment">
+                                    <div class="moment-age" data-translate="growth.childhood.moments.age4.age">Age 4</div>
+                                    <div class="moment-event">
+                                        <h4 data-translate="growth.childhood.moments.age4.title">First Day of Elemental School</h4>
+                                        <p data-translate="growth.childhood.moments.age4.desc">Accidentally created a rainbow of steam when nervous, making everyone smile instead of laugh at her.</p>
+                                    </div>
+                                </div>
+                                <div class="moment">
+                                    <div class="moment-age" data-translate="growth.childhood.moments.age6.age">Age 6</div>
+                                    <div class="moment-event">
+                                        <h4 data-translate="growth.childhood.moments.age6.title">The Great Drought</h4>
+                                        <p data-translate="growth.childhood.moments.age6.desc">Helped end a minor drought by creating rain clouds, though she didn't fully understand her power yet.</p>
+                                    </div>
+                                </div>
+                                <div class="moment">
+                                    <div class="moment-age" data-translate="growth.childhood.moments.age8.age">Age 8</div>
+                                    <div class="moment-event">
+                                        <h4 data-translate="growth.childhood.moments.age8.title">Meeting Elder Mist</h4>
+                                        <p data-translate="growth.childhood.moments.age8.desc">First encounter with her future mentor, who recognized her rare dual-element nature.</p>
+                                    </div>
+                                </div>
+                                <div class="moment">
+                                    <div class="moment-age" data-translate="growth.childhood.moments.age10.age">Age 10</div>
+                                    <div class="moment-event">
+                                        <h4 data-translate="growth.childhood.moments.age10.title">Friendship with Petrichor</h4>
+                                        <p data-translate="growth.childhood.moments.age10.desc">Met her earth-element best friend when her rain helped Petrichor's first garden grow.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="childhood-quote">
+                            <blockquote>
+                                <span data-translate="growth.childhood.quote.text">"Everything feels like magic when you're little. I just never grew out of believing it really was."</span>
+                                <cite data-translate="growth.childhood.quote.cite">— Steam Girl, reflecting on her childhood</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teenage Section -->
+        <section id="teenage" class="growth-stage teenage-stage">
+            <div class="container">
+                <div class="stage-content">
+                    <div class="stage-image">
+                        <img src="steam-girl-teen.jpg" alt="Teenage Steam Girl learning to control her turbulent powers with determination" class="stage-img">
+                        <div class="image-effects teenage-effects">
+                            <div class="storm-effect"></div>
+                            <div class="steam-swirl"></div>
+                        </div>
+                    </div>
+                    <div class="stage-info">
+                        <div class="stage-header">
+                            <h2 class="stage-title">Finding Her Flow</h2>
+                            <div class="age-indicator">Ages 11-17</div>
+                        </div>
+                        
+                        <div class="adolescent-struggles">
+                            <h3>The Turbulent Years</h3>
+                            <p class="story-text">
+                                The teenage years brought new challenges as Steam Girl learned to balance her dual nature. 
+                                Like any adolescent, she struggled with identity – but her journey was complicated by literal fire and water within her soul.
+                            </p>
+                            <p class="story-text">
+                                "Some days I felt like I was drowning in my own flames, other days like my tears could extinguish my hope," 
+                                she recalls. "Learning that both were part of me, not things to fight against, was the hardest lesson."
+                            </p>
+                        </div>
+
+                        <div class="powers-evolution">
+                            <h3>Growing Abilities</h3>
+                            <div class="power-grid teenage-powers">
+                                <div class="power-item">
+                                    <div class="power-icon">🛡️</div>
+                                    <h4>Protective Barriers</h4>
+                                    <p>Fire shields that defended friends from harm, steam walls that provided cover in difficult situations.</p>
+                                </div>
+                                <div class="power-item">
+                                    <div class="power-icon">💚</div>
+                                    <h4>Healing Waters</h4>
+                                    <p>Discovered her tears could heal both physical wounds and emotional pain in others.</p>
+                                </div>
+                                <div class="power-item">
+                                    <div class="power-icon">🌪️</div>
+                                    <h4>Weather Influence</h4>
+                                    <p>Strong emotions began affecting local weather patterns, requiring careful emotional regulation.</p>
+                                </div>
+                                <div class="power-item">
+                                    <div class="power-icon">🚀</div>
+                                    <h4>Steam Travel</h4>
+                                    <p>Learned to transport herself through steam clouds across short distances.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="challenges-faced">
+                            <h3>Trials and Growth</h3>
+                            <div class="challenge-list">
+                                <div class="challenge-item">
+                                    <h4>The Elemental Academy Years</h4>
+                                    <p>
+                                        Struggled to fit in at the prestigious Elemental Academy where students typically mastered one element. 
+                                        Her dual nature made her unique but also isolated until she learned to see it as a strength.
+                                    </p>
+                                </div>
+                                <div class="challenge-item">
+                                    <h4>The Storm King Rivalry</h4>
+                                    <p>
+                                        Faced bullying from Storm King, who believed elements should never mix. This conflict taught her 
+                                        patience and the power of persistent kindness over retaliation.
+                                    </p>
+                                </div>
+                                <div class="challenge-item">
+                                    <h4>First Heartbreak</h4>
+                                    <p>
+                                        When her first love chose someone else, her resulting emotional storm nearly flooded the academy. 
+                                        This incident led to intensive training with Elder Mist on emotional control.
+                                    </p>
+                                </div>
+                                <div class="challenge-item">
+                                    <h4>The Responsibility Crisis</h4>
+                                    <p>
+                                        Realized her powers could affect entire communities, leading to a period of self-doubt about 
+                                        whether she deserved such abilities. Overcame this through community service.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mentor-relationship">
+                            <h3>Guidance from Elder Mist</h3>
+                            <p class="story-text">
+                                During her most turbulent period, Elder Mist became not just a teacher but a surrogate grandmother. 
+                                The ancient cloud spirit helped Steam Girl understand that emotions weren't weaknesses to control, 
+                                but strengths to channel.
+                            </p>
+                            <div class="lesson-learned">
+                                <blockquote>
+                                    "Young one, you are not half fire and half water. You are whole steam – something entirely new and beautiful."
+                                    <cite>— Elder Mist's wisdom that changed everything</cite>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <div class="teenage-achievement">
+                            <h3>The Graduation Ceremony</h3>
+                            <p class="story-text">
+                                At age 17, Steam Girl's graduation display stunned the Elemental Academy. Instead of demonstrating raw power, 
+                                she created a living sculpture that told the story of how all elements work together, bringing tears of joy 
+                                to even her former rivals. It was then that everyone realized she wasn't just powerful – she was wise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Adulthood Section -->
+        <section id="adulthood" class="growth-stage adulthood-stage">
+            <div class="container">
+                <div class="stage-content">
+                    <div class="stage-image">
+                        <img src="steam-girl-adult.jpg" alt="Adult Steam Girl confidently wielding her mastered powers with wisdom and grace" class="stage-img">
+                        <div class="image-effects adulthood-effects">
+                            <div class="harmony-aura"></div>
+                            <div class="mastery-glow"></div>
+                        </div>
+                    </div>
+                    <div class="stage-info">
+                        <div class="stage-header">
+                            <h2 class="stage-title">Master of the In-Between</h2>
+                            <div class="age-indicator">Ages 18+</div>
+                        </div>
+                        
+                        <div class="mastery-description">
+                            <h3>True Understanding</h3>
+                            <p class="story-text">
+                                As an adult, Steam Girl has learned that true power comes not from controlling the elements, 
+                                but from understanding them. She now serves as a mediator in the Elemental realm, 
+                                helping others find their own balance between opposing forces.
+                            </p>
+                            <p class="story-text">
+                                Her reputation as a bridge-builder has spread beyond the Elemental City. Conflicts that once 
+                                seemed impossible to resolve melt away like ice in spring when she brings her unique perspective 
+                                to bear on the situation.
+                            </p>
+                        </div>
+
+                        <div class="mastery-powers">
+                            <h3>Transcendent Abilities</h3>
+                            <div class="power-grid mastery-powers">
+                                <div class="power-item legendary">
+                                    <div class="power-icon">🎨</div>
+                                    <h4>Reality Sculpting</h4>
+                                    <p>Creates living sculptures from steam that can inspire hope, heal trauma, and bring communities together.</p>
+                                </div>
+                                <div class="power-item legendary">
+                                    <div class="power-icon">🌱</div>
+                                    <h4>Life Restoration</h4>
+                                    <p>Her waters can resurrect dying landscapes, while her flames can reignite the spark of life in withered plants.</p>
+                                </div>
+                                <div class="power-item legendary">
+                                    <div class="power-icon">🌈</div>
+                                    <h4>Dimensional Steam Travel</h4>
+                                    <p>Can transport herself and others between different elemental realms using steam as a bridge.</p>
+                                </div>
+                                <div class="power-item legendary">
+                                    <div class="power-icon">🕊️</div>
+                                    <h4>Harmony Meditation</h4>
+                                    <p>Her presence can calm even the most violent elemental storms and bring peace to warring factions.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="major-accomplishments">
+                            <h3>Legendary Achievements</h3>
+                            <div class="accomplishment-timeline">
+                                <div class="accomplishment">
+                                    <div class="acc-year">Age 19</div>
+                                    <div class="acc-event">
+                                        <h4>The Great Reconciliation</h4>
+                                        <p>Successfully mediated the century-long war between the Fire Mountains and Ice Valleys, 
+                                        creating the first mixed-element settlement.</p>
+                                    </div>
+                                </div>
+                                <div class="accomplishment">
+                                    <div class="acc-year">Age 21</div>
+                                    <div class="acc-event">
+                                        <h4>The Drought of Sorrows</h4>
+                                        <p>Ended a magical drought caused by collective grief after a tragedy, teaching an entire region 
+                                        that tears of sadness can become rain of renewal.</p>
+                                    </div>
+                                </div>
+                                <div class="accomplishment">
+                                    <div class="acc-year">Age 22</div>
+                                    <div class="acc-event">
+                                        <h4>The Academy of Balance</h4>
+                                        <p>Founded the first school dedicated to teaching multi-element harmony, revolutionizing 
+                                        elemental education across all realms.</p>
+                                    </div>
+                                </div>
+                                <div class="accomplishment">
+                                    <div class="acc-year">Current</div>
+                                    <div class="acc-event">
+                                        <h4>The Eternal Mediator</h4>
+                                        <p>Serves as the official mediator for all inter-elemental disputes, with a 100% success rate 
+                                        in finding peaceful solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="current-role">
+                            <h3>Present Day</h3>
+                            <p class="story-text">
+                                Today, Steam Girl divides her time between teaching at her Academy of Balance, mediating conflicts 
+                                across the elemental realms, and exploring newly discovered dimensions where her unique abilities 
+                                open doors that have been closed for millennia.
+                            </p>
+                            <p class="story-text">
+                                She has found love with Zephyr, an air elemental whose gentle breezes carry her steam magic 
+                                across vast distances. Together, they create weather patterns that bring joy and renewal 
+                                to every corner of their world.
+                            </p>
+                        </div>
+
+                        <div class="philosophy">
+                            <h3>Life Philosophy</h3>
+                            <blockquote class="adult-wisdom">
+                                "I used to think my purpose was to choose between fire and water. Now I know my purpose is to show 
+                                that there's beauty in the space between choices – that's where real magic lives."
+                                <cite>— Steam Girl's philosophy of balance</cite>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2024 Steam Girl Universe. Created with 🔥 and 💧</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Fan Art</a>
+                    <a href="#" class="footer-link">Community</a>
+                    <a href="#" class="footer-link">Downloads</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

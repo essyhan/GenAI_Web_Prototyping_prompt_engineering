@@ -1,0 +1,608 @@
+/* Advanced Steam Girl Effects - Pixar-Style Animations */
+
+/* ========================================
+   MAGICAL PARTICLE EFFECTS
+======================================== */
+
+@keyframes steamWisp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(0) scale(0.5); 
+    filter: blur(0px);
+  }
+  25% { 
+    opacity: 0.7; 
+    transform: translateY(-20px) scale(0.8); 
+    filter: blur(1px);
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-40px) scale(1); 
+    filter: blur(2px);
+  }
+  75% { 
+    opacity: 0.5; 
+    transform: translateY(-60px) scale(1.2); 
+    filter: blur(3px);
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(-80px) scale(1.5); 
+    filter: blur(4px);
+  }
+}
+
+@keyframes fireFlicker {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg); 
+    filter: brightness(1) hue-rotate(0deg);
+  }
+  25% { 
+    transform: scale(1.1) rotate(2deg); 
+    filter: brightness(1.2) hue-rotate(5deg);
+  }
+  50% { 
+    transform: scale(0.9) rotate(-1deg); 
+    filter: brightness(0.9) hue-rotate(-3deg);
+  }
+  75% { 
+    transform: scale(1.05) rotate(1.5deg); 
+    filter: brightness(1.1) hue-rotate(3deg);
+  }
+}
+
+@keyframes waterFlow {
+  0%, 100% { 
+    transform: translateX(0) scaleY(1); 
+    opacity: 0.8;
+  }
+  33% { 
+    transform: translateX(10px) scaleY(1.1); 
+    opacity: 0.6;
+  }
+  66% { 
+    transform: translateX(-5px) scaleY(0.9); 
+    opacity: 0.9;
+  }
+}
+
+@keyframes magicalGlow {
+  0%, 100% { 
+    box-shadow: 
+      0 0 20px rgba(255, 140, 66, 0.4),
+      0 0 40px rgba(77, 168, 218, 0.3),
+      inset 0 0 20px rgba(255, 228, 196, 0.2);
+  }
+  50% { 
+    box-shadow: 
+      0 0 30px rgba(255, 140, 66, 0.6),
+      0 0 60px rgba(77, 168, 218, 0.5),
+      inset 0 0 30px rgba(255, 228, 196, 0.4);
+  }
+}
+
+@keyframes floatingDance {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg); 
+  }
+  25% { 
+    transform: translateY(-10px) rotate(90deg); 
+  }
+  50% { 
+    transform: translateY(-5px) rotate(180deg); 
+  }
+  75% { 
+    transform: translateY(-15px) rotate(270deg); 
+  }
+}
+
+/* ========================================
+   ENHANCED IMAGE EFFECTS
+======================================== */
+
+.hero-image, .profile-image-main, .stage-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image::before,
+.profile-image-main::before,
+.stage-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 140, 66, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(77, 168, 218, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(255, 228, 196, 0.1) 0%, transparent 70%);
+  animation: magicalAura 8s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes magicalAura {
+  0%, 100% { 
+    transform: rotate(0deg) scale(1); 
+    opacity: 0.5; 
+  }
+  25% { 
+    transform: rotate(90deg) scale(1.1); 
+    opacity: 0.7; 
+  }
+  50% { 
+    transform: rotate(180deg) scale(1.05); 
+    opacity: 0.6; 
+  }
+  75% { 
+    transform: rotate(270deg) scale(1.08); 
+    opacity: 0.8; 
+  }
+}
+
+.main-image, .profile-img, .stage-img {
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.main-image:hover, .profile-img:hover, .stage-img:hover {
+  transform: scale(1.05) rotateY(5deg);
+  filter: brightness(1.1) contrast(1.1) saturate(1.2);
+}
+
+/* ========================================
+   ADVANCED PARTICLE SYSTEM CSS
+======================================== */
+
+.floating-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-particles::before,
+.floating-particles::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: floatingDance 6s ease-in-out infinite;
+}
+
+.fire-particles::before {
+  background: radial-gradient(circle, #FF8C42, #FF6B6B);
+  top: 20%;
+  left: 30%;
+  animation-delay: 0s;
+  animation-duration: 4s;
+}
+
+.fire-particles::after {
+  background: radial-gradient(circle, #FFA500, #FF4500);
+  top: 60%;
+  left: 70%;
+  animation-delay: 2s;
+  animation-duration: 5s;
+}
+
+.water-particles::before {
+  background: radial-gradient(circle, #4DA8DA, #95E1D3);
+  top: 40%;
+  left: 20%;
+  animation-delay: 1s;
+  animation-duration: 6s;
+}
+
+.water-particles::after {
+  background: radial-gradient(circle, #87CEEB, #4DA8DA);
+  top: 80%;
+  left: 80%;
+  animation-delay: 3s;
+  animation-duration: 4.5s;
+}
+
+/* ========================================
+   STEAM WISP EFFECTS
+======================================== */
+
+.steam-wisps {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.steam-wisps::before,
+.steam-wisps::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle, rgba(255, 228, 196, 0.6), transparent);
+  border-radius: 50%;
+  animation: steamWisp 3s ease-in-out infinite;
+  filter: blur(2px);
+}
+
+.steam-wisps::before {
+  top: 50%;
+  left: 45%;
+  animation-delay: 0s;
+}
+
+.steam-wisps::after {
+  top: 60%;
+  left: 55%;
+  animation-delay: 1.5s;
+}
+
+/* ========================================
+   POWER CARD ENHANCEMENTS
+======================================== */
+
+.power-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.power-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255, 255, 255, 0.3), 
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.power-card:hover::after {
+  left: 100%;
+}
+
+.fire-power {
+  background: linear-gradient(135deg, 
+    rgba(255, 140, 66, 0.05), 
+    rgba(255, 107, 107, 0.05)
+  );
+}
+
+.fire-power:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 140, 66, 0.1), 
+    rgba(255, 107, 107, 0.1)
+  );
+  box-shadow: 
+    0 15px 35px rgba(255, 140, 66, 0.2),
+    0 0 50px rgba(255, 140, 66, 0.1);
+}
+
+.water-power {
+  background: linear-gradient(135deg, 
+    rgba(77, 168, 218, 0.05), 
+    rgba(149, 225, 211, 0.05)
+  );
+}
+
+.water-power:hover {
+  background: linear-gradient(135deg, 
+    rgba(77, 168, 218, 0.1), 
+    rgba(149, 225, 211, 0.1)
+  );
+  box-shadow: 
+    0 15px 35px rgba(77, 168, 218, 0.2),
+    0 0 50px rgba(77, 168, 218, 0.1);
+}
+
+.steam-power {
+  background: linear-gradient(135deg, 
+    rgba(255, 228, 196, 0.1), 
+    rgba(240, 248, 255, 0.1)
+  );
+}
+
+.steam-power:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 228, 196, 0.15), 
+    rgba(240, 248, 255, 0.15)
+  );
+  box-shadow: 
+    0 15px 35px rgba(255, 228, 196, 0.3),
+    0 0 50px rgba(255, 228, 196, 0.2);
+}
+
+/* ========================================
+   ADVANCED BUTTON EFFECTS
+======================================== */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.btn:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF8C42, #FF6B6B);
+  position: relative;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #FFA500, #FF4500);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+}
+
+.btn-primary:hover::after {
+  opacity: 1;
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========================================
+   TIMELINE ENHANCEMENTS
+======================================== */
+
+.timeline-preview {
+  position: relative;
+}
+
+.timeline-arrow {
+  position: relative;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 2rem;
+}
+
+.timeline-arrow::before,
+.timeline-arrow::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: arrowFlow 2s ease-in-out infinite;
+}
+
+.timeline-arrow::before {
+  animation-delay: 0s;
+}
+
+.timeline-arrow::after {
+  animation-delay: 0.5s;
+}
+
+@keyframes arrowFlow {
+  0% { 
+    transform: translate(-150%, -50%) scale(0); 
+    opacity: 0; 
+  }
+  50% { 
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translate(50%, -50%) scale(0); 
+    opacity: 0; 
+  }
+}
+
+/* ========================================
+   NAVIGATION ENHANCEMENTS
+======================================== */
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #FF8C42, #4DA8DA);
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+  width: 100%;
+}
+
+/* ========================================
+   SCROLL-TRIGGERED ANIMATIONS
+======================================== */
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+
+/* ========================================
+   THEME TRANSITION EFFECTS
+======================================== */
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --particle-glow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="light"] {
+  --particle-glow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   PERFORMANCE OPTIMIZATIONS
+======================================== */
+
+.power-card,
+.timeline-item,
+.btn {
+  will-change: transform;
+}
+
+.main-image,
+.profile-img,
+.stage-img {
+  will-change: transform, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   LOADING STATES
+======================================== */
+
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    rgba(255, 228, 196, 0.1) 25%, 
+    rgba(255, 228, 196, 0.3) 50%, 
+    rgba(255, 228, 196, 0.1) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ========================================
+   RESPONSIVE MAGIC
+======================================== */
+
+@media (max-width: 768px) {
+  .floating-particles::before,
+  .floating-particles::after {
+    width: 2px;
+    height: 2px;
+  }
+  
+  .steam-wisps::before,
+  .steam-wisps::after {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .hero-image::before,
+  .profile-image-main::before,
+  .stage-image::before {
+    animation-duration: 12s; /* Slower on mobile for performance */
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-particles,
+  .steam-wisps {
+    display: none; /* Hide complex animations on very small screens */
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY ENHANCEMENTS
+======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --auto-bg: #2C3E50;
+    --auto-text: #FFE4C4;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --auto-bg: #FFE4C4;
+    --auto-text: #2C3E50;
+  }
+}
+
+.focus-visible {
+  outline: 2px solid #FF8C42;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ========================================
+   CUSTOM SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 228, 196, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #FF8C42, #4DA8DA);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #FFA500, #5FBBD3);
+} 
